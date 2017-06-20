@@ -172,4 +172,10 @@
     return [expectedItems copy];
 }
 
+- (NSDictionary *)cannedRepresentationHintHeader
+{
+    return [NSDictionary dictionaryWithObject:@"[original][pdf][hls][mp4][mp3][png,jpg]"
+                                       forKey:BOXAPIHTTPHeaderXRepHints];
+}
+
 @end

@@ -34,6 +34,7 @@
 {
     if (_operation == nil) {
         _operation = [self createOperation];
+        [_operation.APIRequest addValue:@"[original][pdf][hls][mp4][mp3][png,jpg]" forHTTPHeaderField:BOXAPIHTTPHeaderXRepHints];
     }
 
     return _operation;
@@ -328,6 +329,7 @@
                        BOXAPIObjectKeyIsExternallyOwned,
                        BOXAPIObjectKeyAllowedInviteeRoles,
                        BOXAPIObjectKeyAllowedSharedLinkAccessLevels,
+                       BOXAPIObjectKeyRepresentations,
                        BOXAPIObjectKeyCollections];
     return array;
 }
